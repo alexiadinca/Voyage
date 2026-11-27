@@ -5,6 +5,7 @@
 
 # ---- Project documents kept out of the repository ---------------------------
 Voyage_Technical_Specification_v1.0.md
+CLAUDE.md
 
 # ---- Secrets / environment files (NEVER commit) ------------------------------
 # Only the *.example templates are committed.

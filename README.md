@@ -15,15 +15,6 @@ The full technical specification (`Voyage_Technical_Specification_v1.0.md`) is s
 
 ---
 
-## 🚨 Golden rule for AI assistants (Claude, Copilot, etc.)
-
-**AI tools must NOT perform git actions themselves** (no add, commit, push, branch, merge, rebase or pull requests).
-The AI **tells us the branch name and commit message**, and **we run the git commands ourselves**.
-
-This rule is written in [CLAUDE.md](CLAUDE.md), which Claude Code reads automatically on every teammate's machine.
-
----
-
 ## Quick start
 
 Once the tools in step 1 are installed, setting up takes three commands:
@@ -203,7 +194,6 @@ After pulling these changes, teammates just run `python setup.py` again.
 ```text
 Voyage/
 ├── .gitignore               # single ignore file for the whole project
-├── CLAUDE.md                # rules for AI assistants (no git actions!)
 ├── setup.py                 # one-command dev environment setup
 ├── requirements.txt         # pinned Python dependencies
 ├── pyproject.toml           # Ruff + pytest configuration
