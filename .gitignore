@@ -1,0 +1,101 @@
+# =============================================================================
+# Voyage – single .gitignore for the whole project
+# (frontend, backend, ml, data, supabase, docs, tooling)
+# =============================================================================
+
+# ---- Project documents kept out of the repository ---------------------------
+Voyage_Technical_Specification_v1.0.md
+
+# ---- Secrets / environment files (NEVER commit) ------------------------------
+# Only the *.example templates are committed.
+.env
+.env.*
+*.env
+!.env.example
+!.env.*.example
+*.pem
+*.key
+credentials*.json
+service-account*.json
+
+# ---- Python (backend, ml, data scripts) --------------------------------------
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+*.log
+
+# ---- Jupyter notebooks (ml/notebooks) ----------------------------------------
+.ipynb_checkpoints/
+
+# ---- Node.js / Next.js (frontend) --------------------------------------------
+node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+.vercel
+coverage/
+
+# ---- Playwright (frontend e2e) -----------------------------------------------
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# ---- Machine learning / data artifacts ---------------------------------------
+# Large generated files: share through storage/releases, not git.
+ml/artifacts/*
+!ml/artifacts/.gitkeep
+ml/data/raw/
+data/**/raw/
+data/**/output/
+*.joblib
+*.pkl
+
+# ---- Supabase CLI local state ------------------------------------------------
+supabase/.branches/
+supabase/.temp/
+
+# ---- Deployment (Render / Vercel local files) --------------------------------
+.render/
+
+# ---- Editors / IDEs ----------------------------------------------------------
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.swp
+*.swo
+
+# ---- Claude Code personal settings -------------------------------------------
+.claude/settings.local.json
+
+# ---- Operating systems -------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini

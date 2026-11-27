@@ -1,0 +1,43 @@
+# Voyage – Python dependencies (backend, ML training, data import scripts, tests)
+# Requires Python 3.12 or newer (numpy 2.5 needs 3.12+).
+# Installed automatically by:  python setup.py
+# Manual install:              pip install -r requirements.txt
+#
+# Versions are pinned so every teammate gets exactly the same packages.
+# To add a dependency: install it in the venv, then add "name==version" below
+# in the right section and commit this file.
+
+# ---- Backend: FastAPI web server and API contracts -------------------------
+fastapi==0.165.0
+uvicorn[standard]==0.54.0
+pydantic==2.14.4
+pydantic-settings==2.16.3
+python-dotenv==1.2.4
+email-validator==2.4.0
+slowapi==0.1.10            # rate limiting for expensive endpoints
+
+# ---- Database and authentication (Supabase / PostgreSQL) -------------------
+supabase==2.34.1
+PyJWT[crypto]==2.15.1      # verify Supabase access tokens
+SQLAlchemy==2.1.9
+psycopg[binary]==3.3.9
+
+# ---- External services: Open-Meteo, Overpass/OSM, OpenAI -------------------
+httpx==0.28.1
+openai==3.60.0
+
+# ---- PDF itinerary export --------------------------------------------------
+reportlab==5.1.2
+
+# ---- Machine learning and data processing ----------------------------------
+pandas==3.1.1
+numpy==2.5.5
+scikit-learn==1.9.1
+joblib==1.6.0              # save/load the trained model pipeline
+ipykernel==7.4.0           # run ml/notebooks in VS Code
+
+# ---- Testing and code quality ----------------------------------------------
+pytest==9.2.0
+pytest-asyncio==1.5.0
+pytest-cov==7.1.0
+ruff==0.17.6

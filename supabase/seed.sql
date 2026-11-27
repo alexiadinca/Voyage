@@ -1,0 +1,1 @@
+﻿-- Seed data for the destination catalog (Section 4). Applied after migrations.
